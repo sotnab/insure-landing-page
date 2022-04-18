@@ -1,0 +1,42 @@
+$header-height: 75px;
+$breakpoint: 750px;
+
+$dark-violet: hsl(256, 26%, 20%);
+$grayish-blue: hsl(216, 30%, 68%);
+
+$very-dark-violet: hsl(270, 9%, 17%);
+$dark-grayish-violet: hsl(273, 4%, 51%);
+$very-light-gray: hsl(0, 0%, 98%);
+
+@mixin flex-column {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+h1,
+h2,
+h3 {
+   font-family: 'DM Serif Display', serif;
+   font-weight: normal;
+}
+
+p {
+   font-size: 0.95rem;
+   font-weight: normal;
+   line-height: 1.6;
+   color: rgba($very-light-gray, 0.9);
+}
+
+html,
+body {
+   font-size: 16px;
+   font-family: 'Karla', sans-serif;
+   color: white;
+}
