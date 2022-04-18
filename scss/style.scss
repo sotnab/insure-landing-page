@@ -97,11 +97,23 @@
       color: $dark-grayish-violet;
       font-size: 0.9rem;
       font-weight: bold;
+      transition: all 100ms;
+      transition-property: color background-color;
+      cursor: pointer;
+
+      &:hover {
+         color: $dark-violet;
+      }
 
       &--oln {
          color: $very-dark-violet;
          padding: 10px 25px;
-         border: 3px solid $very-dark-violet;
+         border: 2px solid $very-dark-violet;
+
+         &:hover {
+            color: $very-light-gray;
+            background-color: $very-dark-violet;
+         }
       }
    }
 }
@@ -216,6 +228,15 @@
    font-size: 0.75rem;
    letter-spacing: 2px;
    color: $very-light-gray;
+   transition: all 100ms;
+   transition-property: color background-color;
+
+   @media (min-width: $breakpoint) {
+      &:hover {
+         color: $very-dark-violet;
+         background-color: $very-light-gray;
+      }
+   }
 }
 
 .intro_link {
@@ -348,6 +369,13 @@
 .footer_link-icon {
    display: block;
    margin: 0 8px;
+   transition: filter 100ms;
+
+   @media (min-width: $breakpoint) {
+      &:hover {
+         filter: brightness(50%);
+      }
+   }
 }
 
 .footer_line {
@@ -382,4 +410,10 @@
    font-size: inherit;
    font-size: 0.95rem;
    text-decoration: none;
+
+   @media (min-width: $breakpoint) {
+      &:hover {
+         text-decoration: underline;
+      }
+   }
 }
